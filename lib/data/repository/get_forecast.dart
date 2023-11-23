@@ -13,7 +13,6 @@ class GetForecast extends _$GetForecast {
   Future<List<Period>> _retrieveForecast() async {
     //Obtains a references from the dio provider created before
     final Dio dio = ref.watch(dioProvider);
-    print('getForecast: Calling get forecast service');
     final forecastResponse = await dio.get<Map<String, dynamic>>(
         'https://api.weather.gov/gridpoints/MLB/33,70/forecast');
 

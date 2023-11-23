@@ -13,7 +13,7 @@ class WeatherList extends ConsumerWidget {
     return forecastList.when(
         data: (items) => ListView.builder(
             primary: false,
-            padding: EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8),
             itemCount: items.length,
             itemBuilder: (context, index) {
               final item = items[index];
